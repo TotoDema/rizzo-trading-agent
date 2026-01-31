@@ -57,12 +57,23 @@ try:
 
 
     # Creating System prompt
-    with open('system_prompt.txt', 'r') as f:
+    with open('system_prompt.txt', 'r', encoding='utf-8') as f:
         full_prompt_template = f.read()
     system_prompt = full_prompt_template.format(portfolio_data, msg_info)
+    
+    # Debug: salva il prompt formattato
+    with open('debug_prompt.txt', 'w', encoding='utf-8') as f:
+        f.write(system_prompt)
+    print("[DEBUG] Prompt salvato in debug_prompt.txt")
         
     print("L'agente sta decidendo la sua azione!")
     out = previsione_trading_agent(system_prompt)
+    
+    print(f"\n[DEBUG] Risposta completa dall'AI:")
+    print(f"Tipo: {type(out)}")
+    print(f"Contenuto: {out}")
+    print()
+    
     bot.execute_signal(out)
 
 

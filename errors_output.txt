@@ -1,0 +1,114 @@
+================================================================================
+ULTIMI ERRORI NEL DATABASE
+================================================================================
+
+================================================================================
+ERRORE #5 - 2026-01-31 14:59:33.967045+01:00
+================================================================================
+Tipo: KeyError
+Source: trading_agent
+Messaggio: '\n  "operation"'
+
+Traceback:
+Traceback (most recent call last):
+  File "c:\Users\sdema\OneDrive\Desktop\Github repository\rizzo-trading-agent\main.py", line 62, in <module>
+    system_prompt = full_prompt_template.format(portfolio_data, msg_info)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n  "operation"'
+
+
+Context:
+  prompt: N/A...
+  tickers: ['BTC', 'ETH', 'SOL']
+  balance: {'balance_usd': 903.354627, 'open_positions': [{'side': 'long', 'size': 0.00085, 'symbol': 'BTC', 'pnl_usd': -5.0928, 'leverage': '2x (cross)', 'mark_price': 83193.5, 'entry_price': 89185.0}]}
+
+
+================================================================================
+ERRORE #4 - 2026-01-31 14:57:54.175654+01:00
+================================================================================
+Tipo: KeyError
+Source: trading_agent
+Messaggio: '\n  "operation"'
+
+Traceback:
+Traceback (most recent call last):
+  File "c:\Users\sdema\OneDrive\Desktop\Github repository\rizzo-trading-agent\main.py", line 62, in <module>
+    system_prompt = full_prompt_template.format(portfolio_data, msg_info)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n  "operation"'
+
+
+Context:
+  prompt: N/A...
+  tickers: ['BTC', 'ETH', 'SOL']
+  balance: {'balance_usd': 903.284077, 'open_positions': [{'side': 'long', 'size': 0.00085, 'symbol': 'BTC', 'pnl_usd': -5.1871, 'leverage': '2x (cross)', 'mark_price': 83082.5, 'entry_price': 89185.0}]}
+
+
+================================================================================
+ERRORE #3 - 2026-01-31 14:51:02.826324+01:00
+================================================================================
+Tipo: KeyError
+Source: trading_agent
+Messaggio: '\n  "operation"'
+
+Traceback:
+Traceback (most recent call last):
+  File "c:\Users\sdema\OneDrive\Desktop\Github repository\rizzo-trading-agent\main.py", line 62, in <module>
+    system_prompt = full_prompt_template.format(portfolio_data, msg_info)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n  "operation"'
+
+
+Context:
+  prompt: N/A...
+  tickers: ['BTC', 'ETH', 'SOL']
+  balance: {'balance_usd': 903.108127, 'open_positions': [{'side': 'long', 'size': 0.00085, 'symbol': 'BTC', 'pnl_usd': -5.355, 'leverage': '2x (cross)', 'mark_price': 82885.0, 'entry_price': 89185.0}]}
+
+
+================================================================================
+ERRORE #2 - 2026-01-31 14:47:24.715988+01:00
+================================================================================
+Tipo: KeyError
+Source: trading_agent
+Messaggio: '\n  "operation"'
+
+Traceback:
+Traceback (most recent call last):
+  File "c:\Users\sdema\OneDrive\Desktop\Github repository\rizzo-trading-agent\main.py", line 62, in <module>
+    system_prompt = full_prompt_template.format(portfolio_data, msg_info)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n  "operation"'
+
+
+Context:
+  prompt: N/A...
+  tickers: ['BTC', 'ETH', 'SOL']
+  balance: {'balance_usd': 903.020577, 'open_positions': [{'side': 'long', 'size': 0.00085, 'symbol': 'BTC', 'pnl_usd': -5.454, 'leverage': '2x (cross)', 'mark_price': 82768.5, 'entry_price': 89185.0}]}
+
+
+================================================================================
+ERRORE #1 - 2026-01-31 14:41:10.246702+01:00
+================================================================================
+Tipo: ValueError
+Source: trading_agent
+Messaggio: Missing required field: target_portion_of_balance
+
+Traceback:
+Traceback (most recent call last):
+  File "c:\Users\sdema\OneDrive\Desktop\Github repository\rizzo-trading-agent\main.py", line 66, in <module>
+    bot.execute_signal(out)
+  File "c:\Users\sdema\OneDrive\Desktop\Github repository\rizzo-trading-agent\hyperliquid_trader.py", line 156, in execute_signal
+    self._validate_order_input(order_json)
+  File "c:\Users\sdema\OneDrive\Desktop\Github repository\rizzo-trading-agent\hyperliquid_trader.py", line 56, in _validate_order_input
+    raise ValueError(f"Missing required field: {f}")
+ValueError: Missing required field: target_portion_of_balance
+
+
+Context:
+  prompt: You are a cryptocurrency trading AI. Based on the following portfolio and market data, decide on a trading action.
+
+Portfolio Data:
+{"balance_usd": 902.877777, "open_positions": [{"symbol": "BTC", "si...
+  tickers: ['BTC', 'ETH', 'SOL']
+  balance: {'balance_usd': 902.877777, 'open_positions': [{'side': 'long', 'size': 0.00085, 'symbol': 'BTC', 'pnl_usd': -5.6291, 'leverage': '2x (cross)', 'mark_price': 82562.5, 'entry_price': 89185.0}]}
+

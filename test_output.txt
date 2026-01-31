@@ -1,0 +1,18 @@
+============================================================
+TEST RISPOSTA AI
+============================================================
+[DEBUG] Risposta AI parsata: {'operation': 'open', 'symbol': 'BTC', 'direction': 'long', 'target_portion_of_balance': 0.5, 'leverage': 2, 'reason': 'BTC is trending upwards, indicating a potential for profit. Opening a long position with 50% of the balance and 2x leverage allows for a balance between risk and reward.'}
+
+✅ JSON parsato con successo!
+
+Risultato:
+{
+  "operation": "open",
+  "symbol": "BTC",
+  "direction": "long",
+  "target_portion_of_balance": 0.5,
+  "leverage": 2,
+  "reason": "BTC is trending upwards, indicating a potential for profit. Opening a long position with 50% of the balance and 2x leverage allows for a balance between risk and reward."
+}
+
+✅ Tutti i campi richiesti sono presenti!

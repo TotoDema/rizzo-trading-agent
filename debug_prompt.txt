@@ -1,0 +1,172 @@
+You are a cryptocurrency trading AI. Based on the following portfolio and market data, decide on a trading action.
+
+Portfolio Data:
+{"balance_usd": 903.682907, "open_positions": [{"symbol": "BTC", "side": "long", "size": 0.00085, "entry_price": 89185.0, "mark_price": 83593.0, "pnl_usd": -4.7532, "leverage": "2x (cross)"}]}
+
+<context_info>
+<indicatori>
+
+<BTC_data>
+Timestamp: 2026-01-31 14:19:51 (UTC) (Hyperliquid, 15m)
+
+current_price = 83500.0, current_ema20 = 84069.581, current_macd = -128.459, current_rsi (7 period) = 41.989
+
+Volume: Bid Vol: 15.504950000000001, Ask Vol: 0.9913
+
+Pivot Points (based on previous day):
+R2 = 87926.00, R1 = 86028.00, PP = 83202.00, S1 = 81304.00, S2 = 78478.00
+
+In addition, here is the latest BTC funding data on Hyperliquid:
+Open Interest (placeholder): Latest: 0.00 Average: 0.00
+Funding Rate: 0.00e+00
+
+Intraday series (15m, oldest → latest):
+Mid prices: [84500.0, 84500.0, 84434.0, 84816.0, 82789.0, 82767.0, 82655.0, 83000.0, 83500.0, 83500.0]
+EMA indicators (20-period): [84977.7, 84932.204, 84884.756, 84878.208, 84679.236, 84497.118, 84321.678, 84195.804, 84129.537, 84069.581]
+MACD indicators: [-74.975, -79.169, -81.449, -53.634, -162.028, -221.789, -253.174, -235.387, -177.282, -128.459]
+RSI indicators (7-Period): [15.485, 15.485, 13.703, 51.43, 13.876, 13.749, 13.039, 26.644, 41.989, 41.989]
+RSI indicators (14-Period): [37.402, 37.402, 36.092, 47.539, 23.493, 23.355, 22.626, 29.887, 38.844, 38.844]
+
+Longer-term context (still 15-minute timeframe, wider window):
+20-Period EMA: 84074.814 vs. 50-Period EMA: 84618.755
+3-Period ATR: 840.916 vs. 14-Period ATR: 689.780
+Current Volume: 0.530 vs. Average Volume: 3.310
+MACD indicators: [-58.328, -63.623, -66.942, -40.107, -149.424, -210.052, -242.25, -225.224, -167.832, -119.675]
+RSI indicators (14-Period): [34.739, 34.739, 33.393, 46.349, 21.95, 21.816, 21.108, 28.773, 38.152, 38.152]
+<BTC_data>
+
+<ETH_data>
+Timestamp: 2026-01-31 14:19:53 (UTC) (Hyperliquid, 15m)
+
+current_price = 2750.0, current_ema20 = 2751.913, current_macd = -0.052, current_rsi (7 period) = 40.141
+
+Volume: Bid Vol: 620.2184, Ask Vol: 3.0773
+
+Pivot Points (based on previous day):
+R2 = 2966.50, R1 = 2840.00, PP = 2720.00, S1 = 2593.50, S2 = 2473.50
+
+In addition, here is the latest ETH funding data on Hyperliquid:
+Open Interest (placeholder): Latest: 0.00 Average: 0.00
+Funding Rate: 0.00e+00
+
+Intraday series (15m, oldest → latest):
+Mid prices: [2750.0, 2750.0, 2750.0, 2750.0, 2750.0, 2750.0, 2750.0, 2750.0, 2750.0, 2750.0]
+EMA indicators (20-period): [2754.709, 2754.26, 2753.855, 2753.487, 2753.155, 2752.855, 2752.583, 2752.337, 2752.114, 2751.913]
+MACD indicators: [-1.334, -1.149, -0.966, -0.791, -0.629, -0.482, -0.351, -0.236, -0.137, -0.052]
+RSI indicators (7-Period): [40.141, 40.141, 40.141, 40.141, 40.141, 40.141, 40.141, 40.141, 40.141, 40.141]
+RSI indicators (14-Period): [45.652, 45.652, 45.652, 45.652, 45.652, 45.652, 45.652, 45.652, 45.652, 45.652]
+
+Longer-term context (still 15-minute timeframe, wider window):
+20-Period EMA: 2752.183 vs. 50-Period EMA: 2756.248
+3-Period ATR: 0.052 vs. 14-Period ATR: 4.920
+Current Volume: 0.043 vs. Average Volume: 0.686
+MACD indicators: [-0.584, -0.449, -0.313, -0.182, -0.062, 0.046, 0.141, 0.222, 0.289, 0.344]
+RSI indicators (14-Period): [42.88, 42.88, 42.88, 42.88, 42.88, 42.88, 42.88, 42.88, 42.88, 42.88]
+<ETH_data>
+
+<SOL_data>
+Timestamp: 2026-01-31 14:19:55 (UTC) (Hyperliquid, 15m)
+
+current_price = 112.7, current_ema20 = 115.399, current_macd = -0.280, current_rsi (7 period) = 9.603
+
+Volume: Bid Vol: 299.16, Ask Vol: 266.07
+
+Pivot Points (based on previous day):
+R2 = 132.47, R1 = 125.15, PP = 113.74, S1 = 106.42, S2 = 95.01
+
+In addition, here is the latest SOL funding data on Hyperliquid:
+Open Interest (placeholder): Latest: 0.00 Average: 0.00
+Funding Rate: 0.00e+00
+
+Intraday series (15m, oldest → latest):
+Mid prices: [115.8, 115.9, 115.9, 115.6, 115.2, 115.1, 114.2, 114.3, 113.6, 112.7]
+EMA indicators (20-period): [116.768, 116.686, 116.612, 116.516, 116.394, 116.267, 116.07, 115.902, 115.679, 115.399]
+MACD indicators: [-0.005, -0.02, -0.025, -0.043, -0.072, -0.093, -0.153, -0.171, -0.216, -0.28]
+RSI indicators (7-Period): [31.017, 35.123, 35.123, 29.436, 24.14, 21.847, 14.285, 18.129, 13.069, 9.603]
+RSI indicators (14-Period): [37.171, 38.923, 38.923, 36.136, 33.167, 31.761, 26.076, 27.697, 23.577, 20.023]
+
+Longer-term context (still 15-minute timeframe, wider window):
+20-Period EMA: 115.400 vs. 50-Period EMA: 116.510
+3-Period ATR: 0.799 vs. 14-Period ATR: 0.566
+Current Volume: 25.780 vs. Average Volume: 52.991
+MACD indicators: [0.009, -0.008, -0.015, -0.035, -0.064, -0.087, -0.147, -0.166, -0.212, -0.276]
+RSI indicators (14-Period): [36.477, 38.324, 38.324, 35.472, 32.452, 31.03, 25.319, 27.002, 22.892, 19.374]
+<SOL_data>
+
+</indicatori>
+
+
+    <news>
+2026-01-30 16:22:37Z | Trump taps crypto-friendly Kevin Warsh to lead the Federal Reserve: Kevin Warsh nominated as Fed Chair, pending Senate confirmation. Known for hawkish policy yet supportive of cryptocurrencies. Markets and crypto reacted quickly to the nomination news. US President Donald Trump has officially nominated Kevin Warsh as the next Chair of the Federal Reserve. The announcement came through Trump’s social media platform, highlighting Warsh’s experience and […]
+2026-01-29 18:20:17Z | Bitcoin crashes to $84K, triggering $800M in crypto liquidations: Bitcoin fell below $85,000 and touched a low of $84,250. CoinGlass data shows total liquidations hit $804 million over the past 24 hours. The crash happened as gold fell from its peak above $5,500 on Thursday. Cryptocurrency markets saw a sharp risk-off move on Thursday, with Bitcoin sliding to a low of $84,250. The sell-off […]
+2026-01-29 17:26:40Z | Here’s why OP token price is falling despite Optimism buyback approval: Optimism (OP) underperformed as risk-off sentiment hit high-beta altcoins hardest. The buyback plan is delayed, small, and lacks immediate supply reduction. Technical breakdown below key averages has triggered strong sell-side momentum. The Optimism (OP) token is falling even after token holders approved a long-awaited buyback plan. At first glance, this seems counterintuitive, since buybacks are […]
+2026-01-29 16:51:00Z | Chiliz price drops 15% amid sharp altcoin pullback: Chiliz (CHZ) price fell sharply on Thursday, with a more than 15% plunge sending prices to lows of $0.046. Losses for the token comes as Bitcoin price drops sharply to impact top altcoins. Upbeat sentiment around CHZ remains amid roadmap plans and World Cup 2026 anticipation. The CHZ token, native to the leading blockchain platform […]
+2026-01-28 18:42:20Z | SUI price outlook: Grayscale Sui ETF filing lifts sentiment as token eyes $1.55 resistance: Grayscale has filed for an Sui ETF, boosting institutional interest in SUI. SUI currently trades at $1.41, facing key resistance at $1.55. Analysts warn of a possible short-term dip before a stable base forms. SUI, the native token of the Sui blockchain, is experiencing renewed optimism following Grayscale’s update to its S-1 form for a […]
+2026-01-28 18:26:02Z | Jupiter price prediction: JUP extends gains as bulls eye $0.30 next: Jupiter price jumped to above $0.23 as several altcoins pumped. Social chatter around airdrop activity and exchange integrations. JUP is also up for robust product adoption on Solana. Jupiter (JUP), the cryptocurrency token of Solana’s leading decentralized exchange, rose to highs of $0.23 on Wednesday, tracking intraday momentum across the broader market. The double-digit gains, […]
+2026-01-28 17:41:21Z | Can SOL break past $130 as WisdomTree expands tokenised funds to Solana?: WisdomTree’s tokenised funds strengthen Solana’s institutional adoption narrative. SOL faces key resistance at $130 after forming support near $117. Rising on-chain activity boosts usage despite ongoing meme coin risks. SOL is currently trading around the mid-$120 range, having recently struggled to reclaim the psychologically important $130 level. Despite short-term weakness, broader developments within the Solana […]
+2026-01-28 17:18:08Z | TAO price gains 5% as AI crypto segment posts broad rally: Bittensor (TAO) price gained 5% to intraday highs of $241. TAO rose as AI tokens rallied, with Render and Virtuals Protocol also up. Bulls target a breakout, with $240 as support amid potential macroeconomic tailwinds. Bittensor’s TAO token was showing strong bullish momentum as the artificial intelligence-linked cryptocurrency segment recorded notable gains. TAO ranked among […]
+2026-01-28 10:44:14Z | ETH price prediction as Ethereum prepares for ERC-8004 mainnet rollout: Ethereum (ETH) holds near $3,000 as institutions accumulate despite mixed short-term sentiment. Strong staking, wallet growth, and ETF inflows support Ethereum’s price f...</news>
+
+
+    <sentiment>
+Sentiment del mercato (Fear & Greed Index):
+  Valore: 28
+  Classificazione: Fear
+  Timestamp: 1769731200
+</sentiment>
+
+
+    <forecast>
+Ticker          Timeframe  Ultimo Prezzo  Previsione  Limite Inferiore  Limite Superiore  Variazione % Timestamp Previsione
+   BTC Prossimi 15 Minuti       83500.00    82677.33          81995.62          83344.66         -0.99  2026-01-31 14:30:00
+   BTC       Prossima Ora       83500.00    84911.33          84115.40          85660.43          1.69  2026-01-31 15:00:00
+   ETH Prossimi 15 Minuti        2750.00     2718.74           2687.22           2749.99         -1.14  2026-01-31 14:30:00
+   ETH       Prossima Ora        2750.00     2734.23           2693.70           2777.03         -0.57  2026-01-31 15:00:00
+   SOL Prossimi 15 Minuti         112.74      113.00            110.85            115.27          0.23  2026-01-31 14:30:00
+   SOL       Prossima Ora         112.74      116.18            114.14            118.18          3.05  2026-01-31 15:00:00
+</forecast>
+
+
+</context_info>
+
+Analyze the market and portfolio, then respond with ONLY a JSON object.
+
+REQUIRED JSON FORMAT (ALL fields are MANDATORY):
+{
+  "operation": "open" | "close" | "hold",
+  "symbol": "BTC" | "ETH" | "SOL",
+  "direction": "long" | "short",
+  "target_portion_of_balance": 0.0-1.0,
+  "leverage": 1-10,
+  "reason": "your explanation here"
+}
+
+Rules:
+- ALL 6 fields above are REQUIRED for every response
+- operation must be "open", "close", or "hold"
+- direction must be "long" or "short"
+- For "open": Open a new position
+  - symbol: which coin to trade
+  - direction: "long" (bet price goes up) or "short" (bet price goes down)
+  - target_portion_of_balance: % of available cash to use (0.0-1.0, e.g., 0.3 = 30%)
+  - leverage: leverage multiplier (1-10, higher = more risk/reward)
+- For "close": Close an existing position
+  - symbol: which coin position to close
+  - direction: must match the position side you want to close
+  - target_portion_of_balance: set to 0.0 (ignored for close, but required)
+  - leverage: set to 1 (ignored for close, but required)
+- For "hold": no action taken
+  - symbol: any symbol from available data
+  - direction: "long" or "short" (doesn't matter for hold)
+  - target_portion_of_balance: set to 0.0
+  - leverage: set to 1
+- IMPORTANT: You can only hold ONE position per coin at a time (either long OR short, not both)
+- Before opening a new position, check Current Positions to see if you already have a position on that coin
+- You can only close positions that you currently hold (check Current Positions)
+- leverage is typically 1-10x; only use high leverage (>5x) if you're very confident
+- Only choose symbols you have price data for
+
+EXAMPLES:
+Open long BTC: {"operation": "open", "symbol": "BTC", "direction": "long", "target_portion_of_balance": 0.3, "leverage": 3, "reason": "Strong bullish indicators"}
+Close position: {"operation": "close", "symbol": "ETH", "direction": "long", "target_portion_of_balance": 0.0, "leverage": 1, "reason": "Taking profit"}
+Hold: {"operation": "hold", "symbol": "BTC", "direction": "long", "target_portion_of_balance": 0.0, "leverage": 1, "reason": "Waiting for clearer signals"}

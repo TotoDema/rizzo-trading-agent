@@ -9,22 +9,42 @@ Portfolio Data:
 
 Analyze the market and portfolio, then respond with ONLY a JSON object.
 
+REQUIRED JSON FORMAT (ALL fields are MANDATORY):
+{{
+  "operation": "open" | "close" | "hold",
+  "symbol": "BTC" | "ETH" | "SOL",
+  "direction": "long" | "short",
+  "target_portion_of_balance": 0.0-1.0,
+  "leverage": 1-10,
+  "reason": "your explanation here"
+}}
+
 Rules:
-- Only ONE position per coin allowed.
+- ALL 6 fields above are REQUIRED for every response
 - operation must be "open", "close", or "hold"
 - direction must be "long" or "short"
-- For "open": Open a new position. You can open LONG (betting price goes up) or SHORT (betting price goes down)
+- For "open": Open a new position
   - symbol: which coin to trade
-  - direction: "long" or "short"
-  - target_portion_of_balance: % of available cash to use (0.0-1.0)
+  - direction: "long" (bet price goes up) or "short" (bet price goes down)
+  - target_portion_of_balance: % of available cash to use (0.0-1.0, e.g., 0.3 = 30%)
   - leverage: leverage multiplier (1-10, higher = more risk/reward)
 - For "close": Close an existing position
   - symbol: which coin position to close
-  - direction: must match the position side you want to close ("long" or "short")
-  - target_portion_of_balance can be omitted because it closes the all position.
-- For "hold": no action taken, direction can be omitted
+  - direction: must match the position side you want to close
+  - target_portion_of_balance: set to 0.0 (ignored for close, but required)
+  - leverage: set to 1 (ignored for close, but required)
+- For "hold": no action taken
+  - symbol: any symbol from available data
+  - direction: "long" or "short" (doesn't matter for hold)
+  - target_portion_of_balance: set to 0.0
+  - leverage: set to 1
 - IMPORTANT: You can only hold ONE position per coin at a time (either long OR short, not both)
 - Before opening a new position, check Current Positions to see if you already have a position on that coin
-- You can only close positions that you currently hold (check Current Positions for side: "LONG" or "SHORT")
+- You can only close positions that you currently hold (check Current Positions)
 - leverage is typically 1-10x; only use high leverage (>5x) if you're very confident
 - Only choose symbols you have price data for
+
+EXAMPLES:
+Open long BTC: {{"operation": "open", "symbol": "BTC", "direction": "long", "target_portion_of_balance": 0.3, "leverage": 3, "reason": "Strong bullish indicators"}}
+Close position: {{"operation": "close", "symbol": "ETH", "direction": "long", "target_portion_of_balance": 0.0, "leverage": 1, "reason": "Taking profit"}}
+Hold: {{"operation": "hold", "symbol": "BTC", "direction": "long", "target_portion_of_balance": 0.0, "leverage": 1, "reason": "Waiting for clearer signals"}}
