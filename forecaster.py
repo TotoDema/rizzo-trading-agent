@@ -129,3 +129,4 @@ def get_crypto_forecasts(tickers=['BTC', 'ETH', 'SOL'], testnet=True):
 # Esempio di utilizzo
 # if __name__ == "__main__":
 #     print(get_crypto_forecasts())
+

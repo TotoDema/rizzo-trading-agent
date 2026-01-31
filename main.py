@@ -17,8 +17,18 @@ VERBOSE = True    # stampa informazioni extra
 PRIVATE_KEY = os.getenv("PRIVATE_KEY")
 WALLET_ADDRESS = os.getenv("WALLET_ADDRESS")
 
+# Inizializzazione variabili per logging in caso di errore
+system_prompt = "N/A"
+tickers = []
+indicators_json = {}
+news_txt = ""
+sentiment_json = {}
+forecasts_json = {}
+account_status = {}
+
 if not PRIVATE_KEY or not WALLET_ADDRESS:
     raise RuntimeError("PRIVATE_KEY o WALLET_ADDRESS mancanti nel .env")
+
 try:
     bot = HyperLiquidTrader(
         secret_key=PRIVATE_KEY,
@@ -48,8 +58,8 @@ try:
 
     # Creating System prompt
     with open('system_prompt.txt', 'r') as f:
-        system_prompt = f.read()
-    system_prompt = system_prompt.format(portfolio_data, msg_info)
+        full_prompt_template = f.read()
+    system_prompt = full_prompt_template.format(portfolio_data, msg_info)
         
     print("L'agente sta decidendo la sua azione!")
     out = previsione_trading_agent(system_prompt)

@@ -333,3 +333,35 @@ class HyperLiquidTrader:
             print(f"  Price Decimals: {perp.get('pxDecimals', 'N/A')}")
             print(f"  Max Leverage: {perp.get('maxLeverage', 'N/A')}")
             print(f"  Only Isolated: {perp.get('onlyIsolated', False)}")
+
+    # ----------------------------------------------------------------------
+    #                   METODO DI PROVA PER APRIRE ORDINE
+    # ----------------------------------------------------------------------
+
+    def place_order(self, name: str, is_buy: bool, size: float, price: float | None, reduce_only: bool = False):
+        """
+        Invia un ordine a HyperLiquid.
+        - coin: simbolo (BTC, ETH, SOL, ecc.)
+        - is_buy: True = long, False = short
+        - size: quantità
+        - price: prezzo limite oppure None per ordine market
+        - reduce_only: True se vuoi solo chiudere posizioni
+        """
+        if price is None:
+        # Usa market_open per ordine “market”
+            return self.exchange.market_open(name, is_buy, size, None, slippage=0.01)
+        else:
+        # LIMIT ORDER
+            order_type = {"limit": {"tif": "Gtc"}}
+            limit_px = float(price)
+    
+        resp = self.exchange.order(
+            name=name,
+            is_buy=is_buy,
+            sz=size,
+            limit_px=limit_px,     # None = market order
+            order_type=order_type,
+            reduce_only=reduce_only
+        )
+        return resp
+    
